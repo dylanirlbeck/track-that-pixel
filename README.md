@@ -60,7 +60,3 @@ developer tools panel, check the output logs from each server, etc.
   with an `email` argument.
 - Server: Content server running locally on port 3000, [Node.js](https://nodejs.org/en) runtime.
 - Tracking server: Running locally on port 8000, Node.js runtime.
-
-```
-
-```
