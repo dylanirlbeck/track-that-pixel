@@ -14,7 +14,7 @@ Implement a minimally-viable tracking pixel to illustrate the ease with which si
 
 In general, consumers ought to be aware of this basic tracking technology and how it negatively impacts their overall privacy across the web. And developers ought to exercise judgement — and abide by the law, depending on the industry — when incorporating this tracking on websites they build.
 
-## Experiment
+## Experiment design
 
 To simulate the behavior of a tracking pixel, we’re going to build a minimal client-server interaction with a third-party tracking server. The experiment will proceed roughly as follows:
 
@@ -26,6 +26,33 @@ To simulate the behavior of a tracking pixel, we’re going to build a minimal c
    3. The third-party server will respond with some legitimate image — in our case, a single pixel — for which the browser can “display” (keep in mind that the tag is so small that the user won’t even see it).
 4. The user proceeds to interact with the webpage, never suspecting that their data has just been harvested.
 
+## Running the experiment
+
+_Prerequisite: ensure that you have [Node.js
+installed](https://nodejs.org/en)._
+
+Clone this repository.
+
+```
+git clone https://github.com/dylanirlbeck/track-that-pixel.git
+```
+
+Navigate to the cloned repository. In your [shell](<https://en.wikipedia.org/wiki/Shell_(computing)>), run
+
+```
+node server.js
+```
+
+In a separate shell, run
+
+```
+node trackingServer.js
+```
+
+In your browser of choice, navigate to `http://localhost:3000`. From here, you
+can play around with the provied input, inspect the source using the browser's
+developer tools panel, check the output logs from each server, etc.
+
 ## Tech stack
 
 - Client: Google Chrome browser loading a basic HTML file from disk. The file
@@ -33,3 +60,7 @@ To simulate the behavior of a tracking pixel, we’re going to build a minimal c
   with an `email` argument.
 - Server: Content server running locally on port 3000, [Node.js](https://nodejs.org/en) runtime.
 - Tracking server: Running locally on port 8000, Node.js runtime.
+
+```
+
+```
