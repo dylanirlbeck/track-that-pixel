@@ -30,6 +30,6 @@ To simulate the behavior of a tracking pixel, we’re going to build a minimal c
 
 - Client: Google Chrome browser loading a basic HTML file from disk. The file
   has a few lines of JavaScript to dynamically construct the tracking server URL
-  with an argument.
+  with an `email` argument.
 - Server: Content server running locally on port 3000, [Node.js](https://nodejs.org/en) runtime.
 - Tracking server: Running locally on port 8000, Node.js runtime.
