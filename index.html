@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+  <script>
+    function updateImage() {
+      var userEmailAddress = document.getElementById("emailInput").value;
+
+      var trackingPixel = document.getElementById("trackingPixel");
+      trackingPixel.src = encodeURI(
+        `http://localhost:8000/?email=${userEmailAddress}`
+      );
+    }
+  </script>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>Please enter your email address.</p>
+    <input type="text" id="emailInput" placeholder="Enter your email..." />
+    <button onclick="updateImage()">Done</button>
+    <img id="trackingPixel" src="" width="1" height="1" />
+  </body>
+</html>
